@@ -1,0 +1,101 @@
+# 大文字と小文字を区別するので注意
+DATABASE	:	app_kazuya
+USER		:	app_kazuya
+PASS		:	BWY6MKiT
+host		: 	127.0.0.1
+
+
+
+############################################
+#
+# 次のファイルは手動で修正すること
+#　/folder_app_ms-xxxx/application/config/config.ini
+#
+############################################
+
+#
+#文字変換
+# 先頭に『＃』がある行はコメントです。
+# 先頭に『s』がある行は置換、上から順に置換し、置換した結果も置換の対象になります。
+
+#	:	iosPushNotifier
+s	:	法要アプリからお知らせ	:	法要アプリからお知らせ
+
+#	:	application/smarty/templates/mng_notice_view.tbl
+#	:	application/smarty/templates/mng_notice_view_error.tbl
+#	:	著作権表示
+s	:	2016 株式会社○○○○葬儀社	:	2017 有限会社　かずや
+s	:	株式会社○○○○葬儀社	:	有限会社かずや
+s	:	〒981-0923	:	〒865-0023
+s	:	宮城県仙台市青葉区東勝山3-5-10	:	熊本県玉名市大倉1408-1
+s	:	022‐727‐0861	:	0968-73-3420
+s	:	tel:[0-9]*	:	tel:0968733420
+s	:	http:\/\/wow\.ne\.jp	:	http:\/\/www\.kazuya-group\.com
+
+#	:	application/smarty/templates/addup_login.tpl
+#	:	application/smarty/templates/addup_download.tpl
+#	:	application/smarty/templates/include/mng_header.html
+s	:	株式会社○○○○法要アプリ管理システム	:	有限会社かずや法要アプリ管理システム
+
+#	:	application/smarty/templates/addup_download.tpl
+#	:	application/smarty/templates/addup_login.tpl
+s	:	法要アプリ版QRコード受注集計システム	:	法要アプリ版QRコード受注集計システム
+s	:	受注明細ダウンロード　ログイン	:	受注明細ダウンロード　ログイン
+
+#	:	application/smarty/templates/datakey.tbl
+#	:	application/smarty/templates/datakey_ios.tbl
+s	:	法要アプリご利用者様	:	法要アプリご利用者様
+
+#	:	application/smarty/templates/datakey.tbl
+#	:	application/smarty/templates/datakey_ios.tbl
+#	:	application/smarty/templates/mail_notice_memorial.tpl
+#	:	application/smarty/templates/mail_notice_memorial_ios.tpl
+#	:	application/smarty/templates/mail_bestending_url.tpl
+#	:	application/smarty/templates/mail_bestending_url_ios.tpl
+s	:	^法要アプリ	:	法要アプリ
+
+#	:	application/controller/CooperationController.php
+#                'subject' => 'ご法要予定のお知らせ',
+s	:	ご法要予定のお知らせ	:	ご法要予定のお知らせテスト
+
+s	:	法要アプリから送信されたメール	:	てすと法要アプリから送信されたメール
+s	:	'法要アプリ'	:	'法要アプリ'
+s	:	>株式会社○○○○<	:	>株式会社テスト<S
+
+#	:	application/smarty/templates/syukatsu.tpl
+#	:	application/smarty/templates/comp_url_send_mail.tpl
+s	:	2016 株式会社○○○○	:	2017 有限会社かずや
+s	:	\<株式会社○○○○\>	:	有限会社かずや
+
+
+#	:	application/smarty/templates/syukatsu.tpl
+s	:	https:\/\/bestending.net\/entry\/dispexplain\?ak=4SZVYriQ	:	https:\/\/bestending.net\/entry\/dispexplain\?ak=4SZVYriQ
+
+#	:	application/common/comDefine.php
+#		//PDFファイル名
+s	:	法要アプリのご案内_%s様.pdf		:	法要アプリのご案内_%s様.pdf
+#       subject' => '法要アプリQRコード受注のお知らせ',
+s	:	法要アプリQRコード受注のお知らせ	:	法要アプリQRコード受注のお知らせ
+#		$outputFileName = "法要アプリ受注明細_"
+s	:	法要アプリ受注明細_		:	法要アプリ受注明細_
+
+#	ディレクトリに影響します。注意！！
+s	:	folder_app_ms-dev	:	folder_app_ms-kazuya
+
+
+# AppMngData.php
+s	:	\/virtual\/htdocs\/default\/push-nichitest	:	\/virtual\/htdocs\/default\/push-kazuya
+
+
+# .thaccess
+s	:	ms-nichitest	:	ms-kazuya
+
+
+# html css link 関連のディレクトリの変更
+s	:	\.\.\/\.\.\/js\/	:	http:\/\/ms-kazuya\.memorial-srv\.com\/js\/
+s	:	\.\.\/\.\.\/css\/	:	http:\/\/ms-kazuya\.memorial-srv\.com\/css\/
+s	:	\.\.\/\.\.\/m\/	:	http:\/\/ms-kazuya\.memorial-srv\.com\/m\/
+
+
+
+

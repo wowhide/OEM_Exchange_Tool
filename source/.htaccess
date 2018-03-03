@@ -1,0 +1,16 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /ms-nichitest/
+RewriteRule !\.(js|ico|gif|jpg|png|css)$ index.php
+
+php_value include_path ".:/virtual/htdocs/library"
+    
+#不用意なエラーレポート出力をさせないようにする
+#必要に応じて「ini_set("display_errors", 1)」を使うのがベター
+php_flag display_errors On
+    
+#「mbstring」関係の設定
+php_value mbstring.language "Japanese"
+php_value mbstring.internal_encoding "EUC-JP"
+php_flag  mbstring.encoding_translation Off
+php_value display_errors Off
